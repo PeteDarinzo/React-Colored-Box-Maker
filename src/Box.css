@@ -1,0 +1,15 @@
+
+.Box-container {
+  display: inline-block;
+  margin: 15px;
+}
+
+.Box {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.Box-delete {
+  display: inline-block;
+  margin: 15px;
+}
