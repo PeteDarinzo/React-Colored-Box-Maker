@@ -15,8 +15,8 @@ it("matches the box list snapshot", () => {
 it("should add a new box", () => {
   const { queryByText, getByLabelText, getByTestId } = render(<BoxList />);
 
-  const heightInput = getByLabelText("Height");
-  const widthInput = getByLabelText("Width");
+  const heightInput = getByLabelText("Height (pixels)");
+  const widthInput = getByLabelText("Width (pixels)");
   const colorInput = getByLabelText("Color");
   const btn = queryByText("Add Box");
 
