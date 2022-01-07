@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./NewBoxForm.css"
 
 const NewBoxForm = ({ addBox }) => {
   const initialState = {
@@ -25,38 +25,41 @@ const NewBoxForm = ({ addBox }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="height">Height</label>
+    <form className="NewBoxForm" onSubmit={handleSubmit}>
+      <label htmlFor="height" className="NewBoxForm-label">Height (pixels)</label>
       <input
         id="height"
         type="number"
         name="height"
+        className="NewBoxForm-input"
         min="50"
         max="200"
         value={formData.height}
         onChange={handleChange}
       />
-      <label htmlFor="width">Width</label>
+      <label htmlFor="width" className="NewBoxForm-label">Width (pixels)</label>
       <input
         id="width"
         type="number"
         name="width"
+        className="NewBoxForm-input"
         min="50"
         max="200"
         value={formData.width}
         onChange={handleChange}
       />
-      <label htmlFor="color">Color</label>
+      <label htmlFor="color" className="NewBoxForm-label">Color</label>
       <input
         id="color"
         type="color"
         name="color"
+        className="NewBoxForm-input"
         value={formData.color}
         onChange={handleChange}
       />
-      <button>Add Box</button>
+      <button className="NewBoxForm-button">Add Box</button>
     </form>
-  )
+  );
 }
 
 export default NewBoxForm;

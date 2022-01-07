@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the box list snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h3>
+      Colored Box Generator
+    </h3>
+    <form>
+      <label
+        for="height"
+      >
+        Height
+      </label>
+      <input
+        id="height"
+        max="200"
+        min="50"
+        name="height"
+        type="number"
+        value="50"
+      />
+      <label
+        for="width"
+      >
+        Width
+      </label>
+      <input
+        id="width"
+        max="200"
+        min="50"
+        name="width"
+        type="number"
+        value="50"
+      />
+      <label
+        for="color"
+      >
+        Color
+      </label>
+      <input
+        id="color"
+        name="color"
+        type="color"
+        value="#000000"
+      />
+      <button>
+        Add Box
+      </button>
+    </form>
+    <div />
+  </div>
+</DocumentFragment>
+`;

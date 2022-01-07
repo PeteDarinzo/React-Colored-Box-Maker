@@ -9,7 +9,7 @@ const BoxList = () => {
   const [boxes, setBoxes] = useState([]);
 
   const addBox = (newBox) => {
-    setBoxes(boxes => [...boxes, { ...newBox, id: uuid() }])
+    setBoxes(boxes => [...boxes, { ...newBox, id: uuid() }]);
   }
 
   const deleteBox = (id) => {
@@ -20,10 +20,17 @@ const BoxList = () => {
 
   return (
     <div>
-      <h3>All Boxes</h3>
+      <h2>Colored Box Generator</h2>
       <NewBoxForm addBox={addBox} />
       <div>
-        {boxes.map(({ height, width, color, id }) => <Box height={height} width={width} color={color} key={id} id={id} deleteBox={deleteBox} />)}
+        {boxes.map(({ height, width, color, id }) =>
+          <Box
+            height={height}
+            width={width}
+            color={color}
+            key={id}
+            id={id}
+            deleteBox={deleteBox} />)}
       </div>
     </div>
   );

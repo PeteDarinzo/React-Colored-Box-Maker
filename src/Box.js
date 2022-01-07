@@ -11,12 +11,17 @@ const Box = ({ height, width, color, id, deleteBox }) => {
 
   return (
     <div className="Box-container">
-      <div className="Box" style={{ height: `${height}px`, width: `${width}px`, backgroundColor: `${color}` }} />
-      <button className=".Box-delete" onClick={handleDeleteBox} id={id}>X</button>
+      <div
+        className="Box"
+        style={{ height: `${height}px`, width: `${width}px`, backgroundColor: `${color}` }}
+        data-testid={color} />
+      <button
+        className=".Box-delete"
+        id={id}
+        onClick={handleDeleteBox}>X</button>
     </div>
   );
 }
 
 export default Box;
 
-//`rgb${color}`
